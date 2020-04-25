@@ -33,15 +33,6 @@ namespace ACM.BL
 
             return isValid;
         }
-        //Retrice one order
-        public Order Retrieve()
-        {
-            return new Order();
-        }
-        // Save the current order
-        public bool Save()
-        {
-            return true;
-        }
+        
     }
 }
