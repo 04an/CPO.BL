@@ -38,17 +38,5 @@ namespace ACM.BL
 
         }
 
-        //Retrive one product
-        public Product Retrieve(int productID)
-        {
-            return new Product();
-        }
-        // Saves the current product
-        public bool Save()
-        {
-            return true;
-        }
-
-
     }
 }
