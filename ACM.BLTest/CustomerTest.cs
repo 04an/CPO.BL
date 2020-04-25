@@ -82,5 +82,57 @@ namespace ACM.BLTest
             Assert.AreEqual(3,Customer.InstanceCount);
 
         }
+        [TestMethod]
+        public void ValisatrValid()
+        {
+            //--Arrange
+            var customer = new Customer
+            {
+                LastName = "Pokemon",
+                EmailAddress = "PokemonGo@mutants.jp"
+            };
+
+            var expected = true;
+
+            //--Act
+            var actual = customer.Validate();
+
+            //--Assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void ValidateMissingLastName()
+        {
+            //--Arrange
+            var customer = new Customer
+            {
+               EmailAddress = "PokemonGo@mutants.jp"
+            };
+
+            var expected = false;
+
+            //--Act
+            var actual = customer.Validate();
+
+            //--Assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void ValidateMissingEmail()
+        {
+            //--Arrange
+            var customer = new Customer
+            {
+                LastName = "Pokemon"
+            };
+
+            var expected = false;
+
+            //--Act
+            var actual = customer.Validate();
+
+            //--Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
