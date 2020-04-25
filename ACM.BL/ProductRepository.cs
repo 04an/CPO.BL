@@ -23,7 +23,7 @@ namespace ACM.BL
             return product;
         }
         // Saves the current product
-        public bool Save()
+        public bool Save(Product product)
         {
             return true;
         }

@@ -31,7 +31,7 @@ namespace ACM.BL
         }
 
         //Save the current customer
-        public bool Save( )
+        public bool Save(Customer customer)
         {
 
             return true;
