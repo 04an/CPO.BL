@@ -24,7 +24,7 @@ namespace ACM.BL
         public int Quantity { get; set; }
 
         //Retrieve one order item
-        public OrderItem Retrieve( int orderItemID)
+        public OrderItem Retrieve(int orderItemID)
         {
             return new OrderItem();
         }
@@ -37,13 +37,12 @@ namespace ACM.BL
         public bool Validate()
         {
             var isValid = true;
-            if(Quantity <= 0) isValid = false;
+            if (Quantity <= 0) isValid = false;
             if (ProductID <= 0) isValid = false;
             if (PurchasePrice == null) isValid = false;
 
             return isValid;
         }
-        }
     }
-
 }
+
