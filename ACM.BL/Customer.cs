@@ -8,7 +8,7 @@ namespace ACM.BL
 {
     public class Customer
     {
-        public Customer()
+        public Customer(): this(0)
         {
 
         }
@@ -16,12 +16,14 @@ namespace ACM.BL
         public Customer(int customerId)
         {
             this.CustId = customerId;
+            AddressList = new List<Address>();
         }
         public int CustId { get; private set; }
         public static int InstanceCount { get; set; }
-
+        public Address HomeAddres { get; set; }
+        public Address WorkAddress { get; set; }
+        public List<Address> AddressList { get; set; }
         public string EmailAddress { get; set; }
-
         public string FirstName { get; set; }
         private string _lastName;
         public string LastName
@@ -35,7 +37,6 @@ namespace ACM.BL
                 _lastName = value;
             }
         }
-
         public string FullName
         {
             get 
