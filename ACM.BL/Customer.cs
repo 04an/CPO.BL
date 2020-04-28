@@ -19,6 +19,7 @@ namespace ACM.BL
             AddressList = new List<Address>();
         }
         public int CustId { get; private set; }
+        public int CustomerType { get; set; }
         public static int InstanceCount { get; set; }
         public Address HomeAddres { get; set; }
         public Address WorkAddress { get; set; }
