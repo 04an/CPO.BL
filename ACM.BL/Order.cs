@@ -20,6 +20,10 @@ namespace ACM.BL
         public int ShippingAddressID { get; set; }
 
         public List<OrderItem> OrderItems { get; set; }
+        public override string ToString()
+        {
+            return $"{ OrderDate.Value.Date}({OrderID})";
+        }
 
 
         // Validate tthe order data

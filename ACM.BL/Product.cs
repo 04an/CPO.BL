@@ -21,6 +21,8 @@ namespace ACM.BL
         public string Description { get; set; }
         public decimal? CurrentPrice { get; set; }
 
+        public override string ToString() => ProductName;
+
         // Validate the product data
         public bool Validate()
         {
