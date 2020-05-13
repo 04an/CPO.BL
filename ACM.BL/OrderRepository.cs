@@ -20,13 +20,32 @@ namespace ACM.BL
                
             }
 
-
             return  order;
         }
         // Save the current order
         public bool Save(Order order)
         {
-            return true;
+            var success = true;
+
+            if (order.HasChanges)
+            {
+                if (order.IsValid)
+                {
+                    if (order.IsNew)
+                    {
+                        // Call an Update Store Procedure
+                    }
+                    else
+                    {
+                        // Call an Update Store Procedure 
+                    }
+                }
+                else
+                {
+                    success = false;
+                }
+            }
+            return success;
         }
     }
 }
