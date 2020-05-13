@@ -85,5 +85,69 @@ namespace ACM.BLTest
             }
         }
 
+        [TestMethod]
+        public void SaveTest()
+        {
+            //--Arrange
+            var customerRepository = new CustomerRepository();
+            var customer = new Customer(2)
+            {
+                EmailAddress = "flower@gmail.com",
+                FirstName = "Paul",
+                LastName = "Fikus",
+                HasChanges = true
+            };
+            //--Act
+            var actual = customerRepository.Save(customer);
+            //--Assert
+            Assert.AreEqual(true, actual);
+        }
+        [TestMethod]
+        public void SaveTestMissingEmail()
+        {
+            //--Arrange
+            var customerRepository = new CustomerRepository();
+            var customer = new Customer(2)
+            {
+                FirstName = "Paul",
+                LastName = "Fikus",
+                HasChanges = true
+            };
+            //--Act
+            var actual = customerRepository.Save(customer);
+            //--Assert
+            Assert.AreEqual(false, actual);
+        }
+        [TestMethod]
+        public void SaveTestMissingLastName()
+        {
+            //--Arrange
+            var customerRepository = new CustomerRepository();
+            var customer = new Customer(2)
+            {
+                EmailAddress = "flower@gmail.com",
+                FirstName = "Paul",
+                HasChanges = true
+            };
+            //--Act
+            var actual = customerRepository.Save(customer);
+            //--Assert
+            Assert.AreEqual(false, actual);
+        }
+        [TestMethod]
+        public void SaveTestMissingEmailAndLAstName()
+        {
+            //--Arrange
+            var customerRepository = new CustomerRepository();
+            var customer = new Customer(2)
+            {
+                FirstName = "Paul",
+                HasChanges = true
+            };
+            //--Act
+            var actual = customerRepository.Save(customer);
+            //--Assert
+            Assert.AreEqual(false, actual);
+        }
     }
 }
