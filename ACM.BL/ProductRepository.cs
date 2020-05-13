@@ -22,10 +22,31 @@ namespace ACM.BL
             }
             return product;
         }
+       
         // Saves the current product
         public bool Save(Product product)
         {
-            return true;
+            var success = true;
+
+            if(product.HasChanges)
+            {
+                if (product.IsValid)
+                {
+                    if (product.IsNew)
+                    {
+                        // Call an Update Store Procedure
+                    }
+                    else
+                    {
+                        // Call an Update Store Procedure 
+                    }
+                }
+                else
+                {
+                    success = false;
+                }
+            }
+            return success;
         }
     }
 }
