@@ -17,12 +17,23 @@ namespace ACM.BL
             this.ProductId = productID;
         }
         public int ProductId { get; set; }
-        public string ProductName { get; set; }
         public string Description { get; set; }
         public decimal? CurrentPrice { get; set; }
 
+        private string _productName;
+        public string ProductName 
+        {
+            get
+            {
+                return _productName;
+            }
+            set
+            {
+                _productName = value;
+            }
+        }
         public override string ToString() => ProductName;
-
+        
         // Validate the product data
         public override bool Validate()
         {
