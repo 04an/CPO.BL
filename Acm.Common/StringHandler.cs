@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Acm.Common
 {
-    public class StringHandler
+    public static class StringHandler
     {
-        public string InsertSpace(string source)
+        public static string InsertSpace(string source)
         {
             string result = string.Empty;
 
