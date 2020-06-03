@@ -13,9 +13,9 @@ namespace Acm.CommonTest
             //Arrange
             var source = "IndianTomachawk";
             var expected = "Indian Tomachawk";
-            var handler = new StringHandler();
+            
             //Act
-            var actual = handler.InsertSpace(source);
+            var actual = StringHandler.InsertSpace(source);
 
             //Assert
             Assert.AreEqual(expected, actual);
@@ -26,9 +26,9 @@ namespace Acm.CommonTest
             //Arrange
             var source = "Indian Tomachawk";
             var expected = "Indian Tomachawk";
-            var handler = new StringHandler();
+           
             //Act
-            var actual = handler.InsertSpace(source);
+            var actual = StringHandler.InsertSpace(source);
 
             //Assert
             Assert.AreEqual(expected, actual);
