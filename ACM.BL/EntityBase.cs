@@ -11,7 +11,7 @@ namespace ACM.BL
         public enum EntityStateOption
         {
             Active,
-            Deleted
+            Deleted 
         }
 
         public EntityStateOption EntityState { get; set; }
